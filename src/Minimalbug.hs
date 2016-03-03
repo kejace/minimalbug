@@ -1,6 +1,6 @@
 {-# LANGUAGE OverloadedStrings #-}
 
-module Main where
+module Minimalbug where
 
 import           Control.Monad
 import           Control.Monad.IO.Class       (liftIO)
@@ -12,8 +12,8 @@ import           Database.LevelDB
 import qualified Database.LevelDB.Streaming   as S
 import           Prelude                      hiding (putStrLn)
 
-main :: IO ()
-main = runResourceT $ do
+runMinimalBug :: IO ()
+runMinimalBug = runResourceT $ do
     printVersion
 
     db <- open "/tmp/leveltest"

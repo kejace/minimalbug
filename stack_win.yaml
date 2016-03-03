@@ -6,6 +6,7 @@ resolver: lts-5.4
 # Local packages, usually specified by relative directory name
 packages:
 - '.'
+- '../leveldb-haskell'
 
 # Packages to be pulled from upstream that are not in the resolver (e.g., acme-missiles-0.3)
 extra-deps: [leveldb-haskell-0.6.3]
@@ -28,9 +29,9 @@ extra-package-dbs: []
 # arch: x86_64
 
 extra-include-dirs:
-#- C://msys64//home//blockapps//heth//leveldb-mingw//include
-- /usr/local/include
+- C://msys64//home//blockapps//heth//leveldb-mingw//include
 
 extra-lib-dirs:
-#-  C://msys64//home//blockapps//heth//leveldb-mingw
-- /usr/local/lib
+-  C://msys64//home//blockapps//heth//leveldb-mingw
+#-  c://boost_1_60_0//stage//lib
+

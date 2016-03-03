@@ -16,16 +16,22 @@ build-type:          Simple
 cabal-version:       >=1.10
 
 library
+  hs-source-dirs: src
   default-language: Haskell2010
-  build-depends:
-                   base >=4.8 && <4.9
+  build-depends:   base >=4.8 && <4.9
                  , leveldb-haskell
+                  , resourcet
+                  , transformers
+                  , bytestring
+                  , data-default
+  exposed-modules: Minimalbug
   extra-libraries: leveldb, stdc++
   ghc-options:     -Wall -rtsopts -funbox-strict-fields -lstdc++ -lleveldb
 
 
 executable minimalbug
   main-is:             Main.hs
+  hs-source-dirs: app
   -- other-modules:       
   -- other-extensions:    
   build-depends:       
@@ -35,6 +41,7 @@ executable minimalbug
                   , transformers
                   , bytestring
                   , data-default
+                  , minimalbug
   hs-source-dirs:      src
   default-language:    Haskell2010
   extra-libraries: leveldb, stdc++
